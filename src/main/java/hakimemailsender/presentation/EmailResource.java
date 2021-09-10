@@ -38,7 +38,7 @@ public class EmailResource {
         emailService.sendWelcomeEmail(welcomeMailDto);
         return ResponseEntity.ok().body("email sent");
     }
-
+    @CrossOrigin
     @PostMapping("/welcome")
     public ResponseEntity<?> sendWellcome(@RequestBody WelcomeMailDto mail) {
 
